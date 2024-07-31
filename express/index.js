@@ -2,6 +2,7 @@ console.log("exploring backend stuff");
 
 const express = require('express')
 const app = express()
+app.use(express.json())
 
 const patients = [{
     name: "john",
