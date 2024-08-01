@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>frontend</title>
+</head>
+<style>
+
+</style>
+<body>
+    <button onclick="getAnimalData()">Get Animal Data</button>
+
+    <div class="container">
+        <h1 id="fullname"></h1>
+        <h1 id="email"></h1>
+        <h1 id="phone_no"></h1>
+    </div>
+    
+</body>
+<script>
+    // function getAnimalData(){
+    //     fetch('https://fakerapi.it/api/v1/persons')
+    //     .then(function(res){
+    //         return res.json()
+    //     }).then(function(data){
+    //         console.log(data);
+            
+    //     })
+    // }
+
+    async function getAnimalData(){
+        const response = await fetch('https://fakerapi.it/api/v1/persons')
+        const data = await response.json()
+
+        console.log(data);
+
+        const fullname = document.getElementById('fullname')
+        const email = document.getElementById('email')
+        const phone_no = document.getElementById('phone_no')
+
+        fullname.innerHTML = `fullname : ${data.data[0].firstname} ${data.data[0].lastname} `
+        email.innerHTML = `email : ${data.data[0].email}`
+        phone_no.innerHTML = `phone_no : ${data.data[0].phone}`
+
+
+    } 
+</script>
+</html>

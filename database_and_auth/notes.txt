@@ -1,0 +1,18 @@
+// topics to learn
+
+cryptography concepts
+
+* hashing 
+-- (it is process of converting user password into an random hashcode and store in database. and whenever user relogin again convert password in hash and compare with password hash stored in database)
+
+-- (it is only in one way it can convert password in hash but not able to convert hash into password)
+
+
+
+* encryption
+(in this we can convert that hash code into readable thing called decrypt )
+
+
+* json web tokens (jwt)
+- it takes json as input
+- it takes json and convert to tokens
