@@ -3,8 +3,7 @@ const app = express()
 app.use(express.json())
 const z = require('zod')
 
-// const schema = z.array(z.number()) 
-
+// const schema = z.array(z.number())
 const schema = z.object({
     email: z.string(),
     password: z.string().min(8),
